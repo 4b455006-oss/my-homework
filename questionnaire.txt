@@ -1,0 +1,404 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>生活習慣問卷｜王耀廷</title>
+
+    <!-- W3.CSS 樣式 -->
+    <link rel="stylesheet"
+          href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Microsoft JhengHei", sans-serif;
+            background-color: #F4F1EA;
+            color: #26354A;
+            line-height: 1.8;
+        }
+
+        /* 導覽列 */
+        nav {
+            background-color: #172B4D;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #E5C58A;
+        }
+
+        /* 頁首 */
+        header {
+            background-color: #263F60;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 32px;
+        }
+
+        header p {
+            color: #E5C58A;
+        }
+
+        /* 表單區域 */
+        main {
+            max-width: 850px;
+            margin: 35px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 12px;
+        }
+
+        fieldset {
+            border: 2px solid #D6C6A8;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
+            background-color: #FFFEFC;
+        }
+
+        legend {
+            color: #263F60;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 0 10px;
+        }
+
+        .question {
+            font-weight: bold;
+            color: #263F60;
+            margin-bottom: 5px;
+        }
+
+        .description {
+            color: #777;
+            font-size: 14px;
+            margin-top: 0;
+        }
+
+        .option {
+            display: block;
+            margin: 8px 0;
+        }
+
+        .w3-input {
+            border: 1px solid #C9C9C9;
+            border-radius: 6px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        /* 按鈕 */
+        .submit-btn {
+            background-color: #263F60;
+            color: white;
+            border-radius: 8px;
+        }
+
+        .reset-btn {
+            background-color: #C49A55;
+            color: white;
+            border-radius: 8px;
+        }
+
+        /* 頁尾 */
+        footer {
+            background-color: #172B4D;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 導覽列 -->
+    <nav>
+        <a href="ex2.html">首頁</a>
+        <a href="aboutme.html">關於我</a>
+        <a href="questionnaire.html">問卷表單</a>
+    </nav>
+
+    <!-- 頁首 -->
+    <header>
+        <h1>大學生生活習慣調查</h1>
+        <p>了解自己的生活，也了解不同的大學日常。</p>
+        <p>設計者：王耀廷</p>
+    </header>
+
+    <!-- 問卷內容 -->
+    <main>
+
+        <h2>生活習慣、興趣與時間管理問卷</h2>
+
+        <p>
+            這份問卷主要想了解大學生的生活習慣、
+            興趣以及時間分配方式。
+            請依照自己的實際情況回答，謝謝你的參與！
+        </p>
+
+        <form action="#" method="get">
+
+            <!-- 第1題 是非題 checkbox -->
+            <fieldset>
+                <legend>第1題｜是非題</legend>
+
+                <p class="question">
+                    1. 你認為大學生活除了課業，也應該培養課外興趣嗎？
+                </p>
+
+                <p class="description">
+                    說明：請選擇一個最符合你想法的答案。
+                </p>
+
+                <label class="option">
+                    <input type="checkbox" name="q1" value="是">
+                    是
+                </label>
+
+                <label class="option">
+                    <input type="checkbox" name="q1" value="否">
+                    否
+                </label>
+            </fieldset>
+
+            <!-- 第2題 單選題 radio -->
+            <fieldset>
+                <legend>第2題｜單選題</legend>
+
+                <p class="question">
+                    2. 你平常最常利用哪種方式放鬆自己？
+                </p>
+
+                <p class="description">
+                    說明：以下選項只能選擇一個。
+                </p>
+
+                <label class="option">
+                    <input type="radio" name="q2" value="聽音樂" required>
+                    聽音樂
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q2" value="運動">
+                    運動
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q2" value="看影片">
+                    看影片
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q2" value="與朋友聊天">
+                    與朋友聊天
+                </label>
+            </fieldset>
+
+            <!-- 第3題 單選題 select -->
+            <fieldset>
+                <legend>第3題｜單選題</legend>
+
+                <p class="question">
+                    3. 你每天大約花多少時間在課業上？
+                </p>
+
+                <p class="description">
+                    說明：請從下拉式選單選擇一個答案。
+                </p>
+
+                <select class="w3-select w3-border"
+                        name="q3" required>
+                    <option value="" disabled selected>請選擇時間</option>
+                    <option value="不到1小時">不到1小時</option>
+                    <option value="1至2小時">1至2小時</option>
+                    <option value="2至4小時">2至4小時</option>
+                    <option value="4小時以上">4小時以上</option>
+                </select>
+            </fieldset>
+
+            <!-- 第4題 複選題 checkbox -->
+            <fieldset>
+                <legend>第4題｜複選題</legend>
+
+                <p class="question">
+                    4. 你平常有哪些興趣或休閒活動？
+                </p>
+
+                <p class="description">
+                    說明：可以依照自己的情況選擇多個答案。
+                </p>
+
+                <label class="option">
+                    <input type="checkbox" name="q4[]" value="籃球">
+                    籃球
+                </label>
+
+                <label class="option">
+                    <input type="checkbox" name="q4[]" value="音樂">
+                    音樂
+                </label>
+
+                <label class="option">
+                    <input type="checkbox" name="q4[]" value="電玩">
+                    電玩
+                </label>
+
+                <label class="option">
+                    <input type="checkbox" name="q4[]" value="攝影">
+                    攝影
+                </label>
+
+                <label class="option">
+                    <input type="checkbox" name="q4[]" value="旅行">
+                    旅行
+                </label>
+            </fieldset>
+
+            <!-- 第5題 複選題 select -->
+            <fieldset>
+                <legend>第5題｜複選題</legend>
+
+                <p class="question">
+                    5. 你希望在大學期間學會哪些能力？
+                </p>
+
+                <p class="description">
+                    說明：按住 Ctrl（Mac 使用 Command）可以選擇多個項目。
+                </p>
+
+                <select class="w3-select w3-border"
+                        name="q5[]" multiple size="5">
+                    <option value="溝通能力">溝通能力</option>
+                    <option value="網頁設計">網頁設計</option>
+                    <option value="程式設計">程式設計</option>
+                    <option value="音樂創作">音樂創作</option>
+                    <option value="團隊合作">團隊合作</option>
+                </select>
+            </fieldset>
+
+            <!-- 第6題 文字輸入 -->
+            <fieldset>
+                <legend>第6題｜填充題</legend>
+
+                <p class="question">
+                    6. 請輸入你目前最喜歡的一項興趣。
+                </p>
+
+                <p class="description">
+                    說明：請使用一般文字輸入方塊回答。
+                </p>
+
+                <input class="w3-input w3-border"
+                       type="text"
+                       name="q6"
+                       placeholder="例如：打籃球、聽音樂"
+                       required>
+            </fieldset>
+
+            <!-- 第7題 數字輸入 -->
+            <fieldset>
+                <legend>第7題｜填充題</legend>
+
+                <p class="question">
+                    7. 你一個星期大約運動幾小時？
+                </p>
+
+                <p class="description">
+                    說明：請輸入數字，單位為小時。
+                </p>
+
+                <input class="w3-input w3-border"
+                       type="number"
+                       name="q7"
+                       min="0"
+                       max="168"
+                       placeholder="例如：5"
+                       required>
+            </fieldset>
+
+            <!-- 第8題 日期輸入 -->
+            <fieldset>
+                <legend>第8題｜填充題</legend>
+
+                <p class="question">
+                    8. 請選擇你開始這學期大學生活的日期。
+                </p>
+
+                <p class="description">
+                    說明：請使用日期選擇器選擇日期。
+                </p>
+
+                <input class="w3-input w3-border"
+                       type="date"
+                       name="q8"
+                       required>
+            </fieldset>
+
+            <!-- 第9題 問答題 -->
+            <fieldset>
+                <legend>第9題｜問答題</legend>
+
+                <p class="question">
+                    9. 你認為怎樣的大學生活才是充實且有意義的？
+                </p>
+
+                <p class="description">
+                    說明：請分享自己的想法，至少寫下一些完整句子。
+                </p>
+
+                <textarea class="w3-input w3-border"
+                          name="q9"
+                          rows="4"
+                          placeholder="請在這裡輸入你的想法..."
+                          required></textarea>
+            </fieldset>
+
+            <!-- 送出與重設按鈕 -->
+            <div class="w3-center">
+
+                <button type="submit"
+                        class="w3-button submit-btn w3-padding-large">
+                    送出問卷
+                </button>
+
+                <button type="reset"
+                        class="w3-button reset-btn w3-padding-large">
+                    重設內容
+                </button>
+
+            </div>
+
+        </form>
+
+    </main>
+
+    <!-- 頁尾 -->
+    <footer>
+        <p>© 2026 王耀廷｜個人問卷表單</p>
+        <p>Thank you for your participation.</p>
+    </footer>
+
+</body>
+</html>
